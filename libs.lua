@@ -1,3 +1,5 @@
+@Version = 1.0
+
 -- print table lib
 
 function print_table(node)
