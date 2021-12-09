@@ -1,4 +1,4 @@
---@Version[000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004]
+--@Version[000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005]
 
 --ffi
 ffi.cdef [[
@@ -33,6 +33,12 @@ function client.color_log(r, g, b, msg, ...)
     local clr = ffi.new("color_struct_t")
     clr.r, clr.g, clr.b, clr.a = r, g, b, 255
     ffi_log(clr, msg .. "\n")
+end
+
+--functions
+function logger(s)
+    client.color_log(48, 173, 255, s)
+    print(s)
 end
 
 -- print table lib
