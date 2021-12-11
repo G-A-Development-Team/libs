@@ -1527,3 +1527,15 @@ function renderer.texture(texture, x, y, w, h, r, g, b, a)
 end
 
 return renderer
+--region require
+local function require(modelname)
+    package = package or {}
+
+    package.loaded = package.loaded or {}
+
+    package.loaded[modelname] = package.loaded[modelname] or RunScript(modelname .. ".lua")
+
+    local modelname = package.loaded[modelname] or error("unable to load module " .. modelname, 2)
+
+    return modelname
+end
