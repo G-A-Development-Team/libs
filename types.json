@@ -1,0 +1,33 @@
+{
+    "orange": [
+        "Contraband",
+        "Souvenir",
+        "StatTrak™"
+    ],
+    "red": [
+        "Extraordinary",
+        "Master",
+        "Covert"
+    ],
+    "pink": [
+        "Exotic",
+        "Superior",
+        "Classified"
+    ],
+    "purple": [
+        "Remarkable",
+        "Exceptional",
+        "Restricted",
+        "★",
+        "★StatTrak™"
+    ],
+    "blue": [
+        "High Grade",
+        "Distinguished",
+        "Mil-Spec Grade"
+    ],
+    "grey": [
+        "Base Grade",
+        "Consumer Grade"
+    ]
+}
