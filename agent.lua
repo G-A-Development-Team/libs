@@ -1,4 +1,4 @@
---@Version[000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003]
+--@Version[000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004]
 
 local gun_info_json_url = 'https://steamcommunity.com/market/listings/730/@@weapon@@%20%7C%20@@skin@@%20%28@@wear@@%29/render?start=0&count=1&currency=3&language=english&format=json'
 
@@ -68,25 +68,4 @@ function getWeaponInfo(weapon, skin, wear)
 end
 
 --Executes code to get gun info
-[[
-local js = getWeaponInfo('M4A1-S', 'Player Two', 'Factory New')
-local c = js:split('","listinginfo":{"')[2]
-local lid = c:split('":{"listingid":"')[1]
-local a = js:split('}]}}},"assets":{"730":{"2":{')[2]
-local b = a:split('}}},"currency":')[1]
-local aid = string.split(b, '"')[2]
-b = '{' .. b .. '}'
-local jcode = json.decode(b)
--- Returns Image
-print(getImageURL(jcode[aid]['icon_url_large']))
-print(lid)
-print(aid)
-local inspect = jcode[aid]['market_actions'][1]['link']
-local d = inspect
-d = d:gsub('%%assetid%%', aid)
--- Returns Inspect URL
-print(d)
--- Returns Gun Class
-print(jcode[aid]['type'])
 
-]]
