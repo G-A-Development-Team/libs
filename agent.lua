@@ -50,7 +50,7 @@ function string:split(delimiter)
   table.insert( result, string.sub( self, from  ) )
   return result
 end
-.
+
 function getImageURL(img)
 	return "https://community.akamai.steamstatic.com/economy/image/" .. img
 end
