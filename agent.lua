@@ -1,4 +1,5 @@
-```lua
+--@Version[000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001]
+
 local gun_info_json_url = 'https://steamcommunity.com/market/listings/730/@@weapon@@%20%7C%20@@skin@@%20%28@@wear@@%29/render?start=0&count=1&currency=3&language=english&format=json'
 
 
@@ -86,4 +87,4 @@ d = d:gsub('%%assetid%%', aid)
 print(d)
 -- Returns Gun Class
 print(jcode[aid]['type'])
-```
+
