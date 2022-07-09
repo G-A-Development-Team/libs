@@ -1,4 +1,5 @@
 local MainWindow = {
+    OverrideLocation = true,
 	X = 0,
 	Y = 0,
 	W = 100,
@@ -10,9 +11,16 @@ local MainWindow = {
 	Resize = true,
 	Move = true,
 
+    Location = function()
+        local MENU = gui.Reference('MENU')
+        local x, y = MENU:GetValue()
+        return x, y
+    end,
+
     Draw = function (X, Y, W, H)
-        draw.Color(255,255,255,255)
-        draw.FilledRect(X+120, Y+120, W+120, H+120)
+        draw.Color(0,255,255,255)
+        draw.FilledRect(X, Y, X+10, Y+10)
+
     end,
 }
 
@@ -71,16 +79,24 @@ end
 callbacks.Register("Draw", function()
     for i = 1, #windows do
         local window = windows[i]
+
+        if window.OverrideLocation then
+            window.X, window.Y = window.Location()
+        end
+
         draw.Color(255,255,255,255)
         draw.FilledRect(window.X, window.Y, window.X+window.W, window.Y+window.H)
         window.Draw(window.X, window.Y, window.X+window.W, window.Y+window.H)
+
         if window.Resize then
             Resize(window)
         end
+
         if input.IsButtonReleased(1) then
             window.Move = true
             window.Resize = true
         end
+
         if window.Move then
             Move(window)
         end
@@ -88,6 +104,7 @@ callbacks.Register("Draw", function()
             window.Move = true
             window.Resize = true
         end
+
     end
 end)
 
