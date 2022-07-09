@@ -1,4 +1,4 @@
-local windows = {}
+windows = {}
 
 local function Move(window)
 	if window.Move then
