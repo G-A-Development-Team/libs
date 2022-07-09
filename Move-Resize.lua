@@ -11,6 +11,8 @@ local MainWindow = {
 	Move = true
 }
 
+local windows = {}
+
 local function Move(window)
 	if window.Move then
 		if input.IsButtonDown(1) then
@@ -62,17 +64,26 @@ local function Resize(window)
 end
 
 callbacks.Register("Draw", function()
-	draw.Color(255,255,255,255)
-	draw.FilledRect(MainWindow.X, MainWindow.Y, MainWindow.X+MainWindow.W, MainWindow.Y+MainWindow.H)
-	Resize(MainWindow)
-	if input.IsButtonReleased(1) then
-		MainWindow.Move = true
-		MainWindow.Resize = true
-	end
-	Move(MainWindow)
-	if input.IsButtonReleased(1) then
-		MainWindow.Move = true
-		MainWindow.Resize = true
-	end
-	
+    for i = 1, #windows do
+        local window = windows[i]
+        draw.Color(255,255,255,255)
+        draw.FilledRect(window.X, window.Y, window.X+window.W, window.Y+window.H)
+        if window.Resize then
+            Resize(window)
+        end
+        if input.IsButtonReleased(1) then
+            window.Move = true
+            window.Resize = true
+        end
+        if window.Move then
+            Move(window)
+        end
+        if input.IsButtonReleased(1) then
+            window.Move = true
+            window.Resize = true
+        end
+    end
 end)
+
+--Just insert a new window and done
+table.insert(windows, MainWindow)
