@@ -8,7 +8,7 @@ local Object = {
 	MaxW = 700,
 	MaxH = 700,
 	Resize = true,
-	Move = false
+	Move = true
 }
 
 local function Move()
@@ -20,6 +20,7 @@ local function Move()
 				Object.Y = mouseY - dy;
 			end
 			if mouseX >= Object.X and mouseX <= Object.X + Object.W and mouseY >= Object.Y and mouseY <= Object.Y + Object.H then
+				Object.Resize = false
 				shouldDrag = true;
 				dx = mouseX - Object.X;
 				dy = mouseY - Object.Y;
@@ -33,11 +34,11 @@ end
 local function Resize()
 	if Object.Resize then
 		draw.Color(255,0,0,255)
-		draw.FilledRect(Object.X+Object.W-10, Object.Y+Object.H-10, Object.X+Object.W, Object.Y+Object.H)
-		local resizex = Object.X+Object.W-10
-		local resizey = Object.Y+Object.H-10
-		local resizew = Object.X+Object.W
-		local resizeh = Object.Y+Object.H
+		draw.FilledRect(Object.X+Object.W, Object.Y+Object.H, Object.X+Object.W+10, Object.Y+Object.H+10)
+		local resizex = Object.X+Object.W
+		local resizey = Object.Y+Object.H
+		local resizew = Object.X+Object.W+10
+		local resizeh = Object.Y+Object.H+10
 		if input.IsButtonDown(1) then
 			mouseX, mouseY = input.GetMousePos();
 			if shouldDrag then
@@ -49,6 +50,7 @@ local function Resize()
 				if Object.H > Object.MaxW then Object.H = Object.MaxW end
 			end
 			if mouseX >= resizex and mouseX <= resizex + resizew and mouseY >= resizey and mouseY <= resizey + resizeh then
+				Object.Move = false
 				shouldDrag = true;
 				dx = mouseX - Object.W;
 				dy = mouseY - Object.H;
@@ -63,5 +65,14 @@ callbacks.Register("Draw", function()
 	draw.Color(255,255,255,255)
 	draw.FilledRect(Object.X, Object.Y, Object.X+Object.W, Object.Y+Object.H)
 	Resize()
+	if input.IsButtonReleased(1) then
+		Object.Move = true
+		Object.Resize = true
+	end
 	Move()
+	if input.IsButtonReleased(1) then
+		Object.Move = true
+		Object.Resize = true
+	end
+	
 end)
