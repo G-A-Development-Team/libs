@@ -8,7 +8,12 @@ local MainWindow = {
 	MaxW = 700,
 	MaxH = 700,
 	Resize = true,
-	Move = true
+	Move = true,
+
+    Draw = function (X, Y, W, H)
+        draw.Color(255,255,255,255)
+        draw.FilledRect(X+120, Y+120, W+120, H+120)
+    end,
 }
 
 local windows = {}
@@ -68,6 +73,7 @@ callbacks.Register("Draw", function()
         local window = windows[i]
         draw.Color(255,255,255,255)
         draw.FilledRect(window.X, window.Y, window.X+window.W, window.Y+window.H)
+        window.Draw(window.X, window.Y, window.X+window.W, window.Y+window.H)
         if window.Resize then
             Resize(window)
         end
