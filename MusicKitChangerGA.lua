@@ -34,8 +34,12 @@ RunScript("libraries/json.lua")
 
 local MusicKitChanger = {}
 MusicKitChanger.Json = http.Get('https://raw.githubusercontent.com/G-A-Development-Team/libs/main/music.json')
-print(json.decode(MusicKitChanger.Json))
 MusicKitChanger.List = json.decode(MusicKitChanger.Json)['kits']['kits']
+
+--------------------------------------------
+--          Original Script               --
+-- Credit To: Trollface7272               --
+--------------------------------------------
 MusicKitChanger.Gui = gui.Combobox(gui.Reference("Visuals", "Other", "Extra"), "MKC_KitName", "Music Kit Changer", unpack(MusicKitChanger.List))
 MusicKitChanger.Gui:SetDescription("Changes your music kit.")
 MusicKitChanger.Fire = function()
