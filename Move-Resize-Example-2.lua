@@ -1,3 +1,4 @@
+RunScript("GA/libs/Move-Resize.lua")
 
 local ColorPalette = {
     Background = function() draw.Color(17, 17, 17, 245) end,
