@@ -9,10 +9,29 @@ local function Move(window)
 				window.Y = mouseY - dy;
 			end
 			if mouseX >= window.X and mouseX <= window.X + window.W and mouseY >= window.Y and mouseY <= window.Y + window.H then
-				window.Resize = false
-				shouldDrag = true;
-				dx = mouseX - window.X;
-				dy = mouseY - window.Y;
+				if window.BoundsHeight ~= nil then
+					if mouseX >= window.X and mouseX <= window.X + window.W and mouseY >= window.Y and mouseY <= window.Y + window.BoundsHeight then
+						window.Resize = false
+						shouldDrag = true;
+						dx = mouseX - window.X;
+						dy = mouseY - window.Y;
+					end
+					
+				else
+					if window.BoundsWidth ~= nil then
+						if mouseX >= window.X and mouseX <= window.X + window.BoundsWidth and mouseY >= window.Y and mouseY <= window.Y + window.H then
+							window.Resize = false
+							shouldDrag = true;
+							dx = mouseX - window.X;
+							dy = mouseY - window.Y;
+						end
+					else
+						window.Resize = false
+						shouldDrag = true;
+						dx = mouseX - window.X;
+						dy = mouseY - window.Y;
+					end
+				end
 			end
 		else
 			shouldDrag = false;
