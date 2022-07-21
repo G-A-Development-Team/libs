@@ -77,7 +77,18 @@ callbacks.Register("Draw", function()
             window.X, window.Y = window.Location(window.X, window.Y, window.W, window.H)
         end
 
-        window.Draw(window.X, window.Y, window.W, window.H)
+		if window.Form ~= nil then
+			window.X =  window.Form.Location.X
+			window.Y = window.Form.Location.Y
+			window.W = window.Form.Size.Width
+			window.H = window.Form.Size.Height
+			window.MinW = window.Form.MinimumSize.Width
+			window.MinH = window.Form.MinimumSize.Height
+			window.MaxW = window.Form.MaximumSize.Width
+			window.MaxH = window.Form.MaximumSize.Height
+		end
+
+		window.Draw(window.X, window.Y, window.W, window.H)
 
         if window.Resize then
             Resize(window)
@@ -95,6 +106,16 @@ callbacks.Register("Draw", function()
             window.Move = true
             window.Resize = true
         end
+		if window.Form ~= nil then
+			window.Form.Location.X = window.X
+			window.Form.Location.Y = window.Y
+			window.Form.Size.Width = window.W
+			window.Form.Size.Height = window.H
+			window.Form.MinimumSize.Width = window.MinW
+			window.Form.MinimumSize.Height = window.MinH
+			window.Form.MaximumSize.Width = window.MaxW
+			window.Form.MaximumSize.Height = window.MaxH
+		end
 
     end
 end)
