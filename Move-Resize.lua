@@ -90,9 +90,15 @@ callbacks.Register("Draw", function()
 
 		window.Draw(window.X, window.Y, window.W, window.H)
 
-        if window.Resize then
-            Resize(window)
-        end
+		if window.Form ~= nil then
+			if window.Form.BorderStyle == "Sizable" then
+				Resize(window)
+			end
+		else
+			if window.Resize then
+				Resize(window)
+			end
+		end
 
         if input.IsButtonReleased(1) then
             window.Move = true
