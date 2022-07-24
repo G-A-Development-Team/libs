@@ -36,3 +36,10 @@ function BombDamage(Bomb, Player)
 	return math.max(flDamage, 0);
 	
 end
+
+client.AllowListener("bomb_planted")
+client.AllowListener("bomb_begindefuse")
+client.AllowListener("bomb_abortdefuse") 
+client.AllowListener("bomb_exploded")
+client.AllowListener("round_officially_ended")
+client.AllowListener("bomb_defused") 
