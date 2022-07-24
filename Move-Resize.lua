@@ -15,6 +15,9 @@ local function Move(window)
 						shouldDrag = true;
 						dx = mouseX - window.X;
 						dy = mouseY - window.Y;
+						if window.Form.Dragging ~= nil then
+							window.Form.Dragging = true
+						end
 					end
 					
 				else
@@ -24,17 +27,31 @@ local function Move(window)
 							shouldDrag = true;
 							dx = mouseX - window.X;
 							dy = mouseY - window.Y;
+							if window.Form.Dragging ~= nil then
+								window.Form.Dragging = true
+							end
 						end
 					else
 						window.Resize = false
 						shouldDrag = true;
 						dx = mouseX - window.X;
 						dy = mouseY - window.Y;
+						if window.Form.Dragging ~= nil then
+							window.Form.Dragging = true
+						end
 					end
+				end
+			else
+				if window.Form.Dragging ~= nil then
+					window.Form.Dragging = true
 				end
 			end
 		else
 			shouldDrag = false;
+			if window.Form.Dragging ~= nil then
+				window.Form.Dragging = false
+			end
+			
 		end
 	end
 end
@@ -113,13 +130,6 @@ callbacks.Register("Draw", function()
 
         if window.Move then
             Move(window)
-			if window.Form.Dragging ~= nil then
-				window.Form.Dragging = true
-			end
-		else
-			if window.Form.Dragging ~= nil then
-				window.Form.Dragging = false
-			end
         end
         if input.IsButtonReleased(1) then
             window.Move = true
