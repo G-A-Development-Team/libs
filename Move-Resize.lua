@@ -72,6 +72,12 @@ end
 callbacks.Register("Draw", function()
     for i = 1, #windows do
         local window = windows[i]
+		
+		if window.Form.Visible ~= nil then
+			if window.Form.Visible ~= true then
+				return
+			end
+		end
 
         if window.OverrideLocation then
             window.X, window.Y = window.Location(window.X, window.Y, window.W, window.H)
