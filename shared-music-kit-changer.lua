@@ -51,7 +51,7 @@ local function updateKit()
 			if entities.GetLocalPlayer() == nil  then return end
 			local lp = entities.GetLocalPlayer()
 			local lp_data = client.GetPlayerInfo(lp:GetIndex())
-			print(http.Get(domain .. "setkit.php?steam=" .. lp_data['SteamID'] .. "&kit=" .. gui_kits:GetValue()))
+			http.Get(domain .. "setkit.php?steam=" .. lp_data['SteamID'] .. "&kit=" .. gui_kits:GetValue())
 			cur_kit = gui_kits:GetValue()
 		end
 	end
