@@ -41,7 +41,7 @@ local gui_shared = gui.Checkbox(gui_ref, "MKC_shared", "Share your kit with othe
 gui_kits:SetDescription("Changes your music kit.")
 local user = {}
 local kit = {}
-local domain = http.Get("https://pastebin.com/raw/FwS1Wr7T")
+local domain = http.Get("https://raw.githubusercontent.com/G-A-Development-Team/libs/main/mkc_domain")
 local cur_kit = -1
 
 local function updateKit()
