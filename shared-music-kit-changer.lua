@@ -1,11 +1,11 @@
 -----------------------------------------------
--------Shared Music Kit Changer----------------
----------    Created By:    -------------------
----------    Agentsix1       ------------------
----------   Date: 7/9/2022   ------------------
+-----  Shared Music Kit Changer  --------------
+-----        Created By:         --------------
+-----        Agentsix1           --------------
+-----       Date: 7/29/2022      --------------
 -----------------------------------------------
---------- Tested By:         ------------------
---------- CaterPoe           ------------------
+-----     Tested By:             --------------
+-----     CaterPoe               --------------
 -----------------------------------------------
 --------------------------------------------
 --          READ JSON EXECUTION           --
@@ -39,8 +39,11 @@ local gui_kits = gui.Combobox(gui_ref, "MKC_KitName", "Music Kit Changer", unpac
 gui_kits:SetDescription("Changes your music kit.")
 local gui_shared = gui.Checkbox(gui_ref, "MKC_shared", "Share your kit with others?", false)
 gui_kits:SetDescription("Changes your music kit.")
+
+
 local user = {}
 local kit = {}
+local aw = {}
 local domain = http.Get("https://raw.githubusercontent.com/G-A-Development-Team/libs/main/mkc_domain")
 local cur_kit = -1
 
@@ -67,6 +70,7 @@ callbacks.Register("FireGameEvent", function(e)
 		end
 		user = {}
 		kit = {}
+		aw = {}
 		local players = entities.FindByClass("CCSPlayer")
 		for i = 1, #players do
 			local player = players[i]
@@ -74,7 +78,10 @@ callbacks.Register("FireGameEvent", function(e)
 				if user[i] == nil then
 					local data = client.GetPlayerInfo(player:GetIndex())
 					user[i] = data['SteamID']
-					kit[i] = -1
+					aw[i] = -1
+					if kit[i] == nil then
+						kit[i] = entities.GetPlayerResources():GetPropInt("m_nMusicID", player:GetIndex())
+					end
 					if user[i] ~= nil then
 					end
 				end
@@ -91,12 +98,18 @@ local function setKit()
 			local player = players[i]
 			if player:GetName() ~= "GOTV" then
 				if user[i] ~= nil then
-					if kit[i] == -1 then
-						kit[i] = http.Get(domain .. "getkit.php?steam=" .. user[i])
-						if kit[i] ~= nil then
-							if kit[i] ~= 0 then
+					if aw[i] == -1 then
+						local get_val = http.Get(domain .. "getkitv2.php?steam=" .. user[i])
+						if get_val ~= nil then
+							if get_val ~= "notfound" then
+								kit[i] = get_val
+								aw[i] = "FOUND"
 								entities.GetPlayerResources():SetPropInt(kit[i], "m_nMusicID", player:GetIndex())
+							else
+								aw[i] = "NOT FOUND"
 							end
+						else
+							aw[i] = "NOT FOUND"
 						end
 					end
 				end
