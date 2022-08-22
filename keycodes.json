@@ -1,0 +1,1269 @@
+[
+  {
+    "Key Code": "0",
+    "Key": "",
+    "Code": "Unidentified",
+    "Unicode": "",
+    "Description": "These keys do not have a key code"
+  },
+  {
+    "Key Code": "3",
+    "Key": "Cancel",
+    "Code": "Pause",
+    "Unicode": "",
+    "Description": "break"
+  },
+  {
+    "Key Code": "8",
+    "Key": "Backspace",
+    "Code": "Backspace",
+    "Unicode": "⌫",
+    "Description": "backspace / delete"
+  },
+  {
+    "Key Code": "9",
+    "Key": "Tab",
+    "Code": "Tab",
+    "Unicode": "↹",
+    "Description": "tab"
+  },
+  {
+    "Key Code": "12",
+    "Key": "Clear",
+    "Code": "NumLock",
+    "Unicode": "⌧",
+    "Description": "clear"
+  },
+  {
+    "Key Code": "13",
+    "Key": "Enter",
+    "Code": "Enter",
+    "Unicode": "↵",
+    "Description": "Enter / Return"
+  },
+  {
+    "Key Code": "16",
+    "Key": "Shift",
+    "Code": "ShiftLeft",
+    "Unicode": "⇧",
+    "Description": "shift"
+  },
+  {
+    "Key Code": "17",
+    "Key": "Control",
+    "Code": "ControlLeft",
+    "Unicode": "",
+    "Description": ""
+  },
+  {
+    "Key Code": "18",
+    "Key": "Alt",
+    "Code": "AltLeft",
+    "Unicode": "⎇ / ⌥",
+    "Description": "Alt / Option"
+  },
+  {
+    "Key Code": "19",
+    "Key": "Pause",
+    "Code": "Pause",
+    "Unicode": "",
+    "Description": "pause/break"
+  },
+  {
+    "Key Code": "20",
+    "Key": "CapsLock",
+    "Code": "CapsLock",
+    "Unicode": "⇪",
+    "Description": "caps lock"
+  },
+  {
+    "Key Code": "21",
+    "Key": "Unidentified",
+    "Code": "Lang1",
+    "Unicode": "",
+    "Description": "hangul"
+  },
+  {
+    "Key Code": "25",
+    "Key": "Unidentified",
+    "Code": "Lang2",
+    "Unicode": "",
+    "Description": "hanja"
+  },
+  {
+    "Key Code": "27",
+    "Key": "Escape",
+    "Code": "Escape",
+    "Unicode": "⎋",
+    "Description": "escape"
+  },
+  {
+    "Key Code": "28",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "conversion"
+  },
+  {
+    "Key Code": "29",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "non-conversion"
+  },
+  {
+    "Key Code": "32",
+    "Key": "",
+    "Code": "Space",
+    "Unicode": "",
+    "Description": "spacebar"
+  },
+  {
+    "Key Code": "33",
+    "Key": "PageUp",
+    "Code": "Numpad9",
+    "Unicode": "⇞",
+    "Description": "page up"
+  },
+  {
+    "Key Code": "34",
+    "Key": "PageDown",
+    "Code": "Numpad3",
+    "Unicode": "⇟",
+    "Description": "page down"
+  },
+  {
+    "Key Code": "35",
+    "Key": "End",
+    "Code": "Numpad1",
+    "Unicode": "",
+    "Description": "end"
+  },
+  {
+    "Key Code": "36",
+    "Key": "Home",
+    "Code": "Numpad7",
+    "Unicode": "⌂",
+    "Description": "home"
+  },
+  {
+    "Key Code": "37",
+    "Key": "ArrowLeft",
+    "Code": "ArrowLeft",
+    "Unicode": "←",
+    "Description": "left arrow"
+  },
+  {
+    "Key Code": "38",
+    "Key": "ArrowUp",
+    "Code": "ArrowUp",
+    "Unicode": "↑",
+    "Description": "up arrow"
+  },
+  {
+    "Key Code": "39",
+    "Key": "ArrowRight",
+    "Code": "ArrowRight",
+    "Unicode": "→",
+    "Description": "right arrow"
+  },
+  {
+    "Key Code": "40",
+    "Key": "ArrowDown",
+    "Code": "ArrowDown",
+    "Unicode": "↓",
+    "Description": "down arrow"
+  },
+  {
+    "Key Code": "41",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "select"
+  },
+  {
+    "Key Code": "42",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "print"
+  },
+  {
+    "Key Code": "43",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "execute"
+  },
+  {
+    "Key Code": "44",
+    "Key": "F13",
+    "Code": "F13",
+    "Unicode": "⎙",
+    "Description": "Print Screen / F13 (firefox)"
+  },
+  {
+    "Key Code": "45",
+    "Key": "Insert",
+    "Code": "Numpad0",
+    "Unicode": "x",
+    "Description": "insert"
+  },
+  {
+    "Key Code": "46",
+    "Key": "Delete",
+    "Code": "NumpadDecimal",
+    "Unicode": "⌦",
+    "Description": "delete"
+  },
+  {
+    "Key Code": "47",
+    "Key": "",
+    "Code": "",
+    "Unicode": "⍰",
+    "Description": "help"
+  },
+  {
+    "Key Code": "48",
+    "Key": "0",
+    "Code": "Digit0",
+    "Unicode": "⓪",
+    "Description": "0"
+  },
+  {
+    "Key Code": "49",
+    "Key": "1",
+    "Code": "Digit1",
+    "Unicode": "①",
+    "Description": "1 Key"
+  },
+  {
+    "Key Code": "50",
+    "Key": "2",
+    "Code": "Digit2",
+    "Unicode": "②",
+    "Description": "2 Key"
+  },
+  {
+    "Key Code": "51",
+    "Key": "3",
+    "Code": "Digit3",
+    "Unicode": "③",
+    "Description": "3 Key"
+  },
+  {
+    "Key Code": "52",
+    "Key": "4",
+    "Code": "Digit4",
+    "Unicode": "④",
+    "Description": "4 Key"
+  },
+  {
+    "Key Code": "53",
+    "Key": "5",
+    "Code": "Digit5",
+    "Unicode": "⑤",
+    "Description": "5 Key"
+  },
+  {
+    "Key Code": "54",
+    "Key": "6",
+    "Code": "Digit6",
+    "Unicode": "⑥",
+    "Description": "6 Key"
+  },
+  {
+    "Key Code": "55",
+    "Key": "7",
+    "Code": "Digit7",
+    "Unicode": "⑦",
+    "Description": "7 Key"
+  },
+  {
+    "Key Code": "56",
+    "Key": "8",
+    "Code": "Digit8",
+    "Unicode": "⑧",
+    "Description": "8 Key"
+  },
+  {
+    "Key Code": "57",
+    "Key": "9",
+    "Code": "Digit9",
+    "Unicode": "⑨",
+    "Description": "9 Key"
+  },
+  {
+    "Key Code": "58",
+    "Key": ":",
+    "Code": "Period",
+    "Unicode": "",
+    "Description": ":"
+  },
+  {
+    "Key Code": "59",
+    "Key": ";",
+    "Code": "Semicolon",
+    "Unicode": "",
+    "Description": "semicolon (firefox), equals"
+  },
+  {
+    "Key Code": "60",
+    "Key": "<",
+    "Code": "Backquote",
+    "Unicode": "",
+    "Description": "<"
+  },
+  {
+    "Key Code": "61",
+    "Key": "=",
+    "Code": "Equal",
+    "Unicode": "",
+    "Description": "equals (firefox)"
+  },
+  {
+    "Key Code": "63",
+    "Key": "ß",
+    "Code": "Minus",
+    "Unicode": "",
+    "Description": "ß"
+  },
+  {
+    "Key Code": "64",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "@ (firefox)"
+  },
+  {
+    "Key Code": "65",
+    "Key": "a",
+    "Code": "KeyA",
+    "Unicode": "",
+    "Description": "a"
+  },
+  {
+    "Key Code": "66",
+    "Key": "b",
+    "Code": "KeyB",
+    "Unicode": "",
+    "Description": "b"
+  },
+  {
+    "Key Code": "67",
+    "Key": "c",
+    "Code": "KeyC",
+    "Unicode": "",
+    "Description": ""
+  },
+  {
+    "Key Code": "68",
+    "Key": "d",
+    "Code": "KeyD",
+    "Unicode": "",
+    "Description": "d"
+  },
+  {
+    "Key Code": "69",
+    "Key": "e",
+    "Code": "KeyE",
+    "Unicode": "",
+    "Description": "e"
+  },
+  {
+    "Key Code": "70",
+    "Key": "f",
+    "Code": "KeyF",
+    "Unicode": "",
+    "Description": "f"
+  },
+  {
+    "Key Code": "71",
+    "Key": "g",
+    "Code": "KeyG",
+    "Unicode": "",
+    "Description": "g"
+  },
+  {
+    "Key Code": "72",
+    "Key": "h",
+    "Code": "KeyH",
+    "Unicode": "",
+    "Description": "h"
+  },
+  {
+    "Key Code": "73",
+    "Key": "i",
+    "Code": "KeyI",
+    "Unicode": "",
+    "Description": "i"
+  },
+  {
+    "Key Code": "74",
+    "Key": "j",
+    "Code": "KeyJ",
+    "Unicode": "",
+    "Description": "j"
+  },
+  {
+    "Key Code": "75",
+    "Key": "k",
+    "Code": "KeyK",
+    "Unicode": "",
+    "Description": "k"
+  },
+  {
+    "Key Code": "76",
+    "Key": "l",
+    "Code": "KeyL",
+    "Unicode": "",
+    "Description": "l"
+  },
+  {
+    "Key Code": "77",
+    "Key": "m",
+    "Code": "KeyM",
+    "Unicode": "",
+    "Description": "m"
+  },
+  {
+    "Key Code": "78",
+    "Key": "n",
+    "Code": "KeyN",
+    "Unicode": "",
+    "Description": "n"
+  },
+  {
+    "Key Code": "79",
+    "Key": "o",
+    "Code": "KeyO",
+    "Unicode": "",
+    "Description": "o"
+  },
+  {
+    "Key Code": "80",
+    "Key": "p",
+    "Code": "KeyP",
+    "Unicode": "",
+    "Description": "p"
+  },
+  {
+    "Key Code": "81",
+    "Key": "q",
+    "Code": "KeyQ",
+    "Unicode": "",
+    "Description": "q"
+  },
+  {
+    "Key Code": "82",
+    "Key": "r",
+    "Code": "KeyR",
+    "Unicode": "",
+    "Description": "r"
+  },
+  {
+    "Key Code": "83",
+    "Key": "s",
+    "Code": "KeyS",
+    "Unicode": "",
+    "Description": "s"
+  },
+  {
+    "Key Code": "84",
+    "Key": "t",
+    "Code": "KeyT",
+    "Unicode": "",
+    "Description": "t"
+  },
+  {
+    "Key Code": "85",
+    "Key": "u",
+    "Code": "KeyU",
+    "Unicode": "",
+    "Description": "u"
+  },
+  {
+    "Key Code": "86",
+    "Key": "v",
+    "Code": "KeyV",
+    "Unicode": "",
+    "Description": "v"
+  },
+  {
+    "Key Code": "87",
+    "Key": "w",
+    "Code": "KeyW",
+    "Unicode": "",
+    "Description": "w"
+  },
+  {
+    "Key Code": "88",
+    "Key": "x",
+    "Code": "KeyX",
+    "Unicode": "",
+    "Description": "x"
+  },
+  {
+    "Key Code": "89",
+    "Key": "y",
+    "Code": "KeyY",
+    "Unicode": "",
+    "Description": "y"
+  },
+  {
+    "Key Code": "90",
+    "Key": "z",
+    "Code": "KeyZ",
+    "Unicode": "",
+    "Description": "z"
+  },
+  {
+    "Key Code": "91",
+    "Key": "Meta",
+    "Code": "MetaLeft",
+    "Unicode": "",
+    "Description": ""
+  },
+  {
+    "Key Code": "92",
+    "Key": "Meta",
+    "Code": "MetaRight",
+    "Unicode": "⌘ ⊞",
+    "Description": "Right Windows"
+  },
+  {
+    "Key Code": "93",
+    "Key": "ContextMenu",
+    "Code": "ContextMenu",
+    "Unicode": "▤",
+    "Description": "Windows Menu / Right ⌘"
+  },
+  {
+    "Key Code": "95",
+    "Key": "",
+    "Code": "",
+    "Unicode": "☾",
+    "Description": "sleep"
+  },
+  {
+    "Key Code": "96",
+    "Key": "0",
+    "Code": "Numpad0",
+    "Unicode": "⓪",
+    "Description": "Number Pad 0"
+  },
+  {
+    "Key Code": "97",
+    "Key": "1",
+    "Code": "Numpad1",
+    "Unicode": "①",
+    "Description": "Number Pad 1"
+  },
+  {
+    "Key Code": "98",
+    "Key": "2",
+    "Code": "Numpad2",
+    "Unicode": "②",
+    "Description": "Number Pad 2"
+  },
+  {
+    "Key Code": "99",
+    "Key": "3",
+    "Code": "Numpad3",
+    "Unicode": "③",
+    "Description": "Number Pad 3"
+  },
+  {
+    "Key Code": "100",
+    "Key": "4",
+    "Code": "Numpad4",
+    "Unicode": "④",
+    "Description": "Number Pad 4"
+  },
+  {
+    "Key Code": "101",
+    "Key": "5",
+    "Code": "Numpad5",
+    "Unicode": "⑤",
+    "Description": "Number Pad 5"
+  },
+  {
+    "Key Code": "102",
+    "Key": "6",
+    "Code": "Numpad6",
+    "Unicode": "⑥",
+    "Description": "Number Pad 6"
+  },
+  {
+    "Key Code": "103",
+    "Key": "7",
+    "Code": "Numpad7",
+    "Unicode": "⑦",
+    "Description": "Number Pad 7"
+  },
+  {
+    "Key Code": "104",
+    "Key": "8",
+    "Code": "Numpad8",
+    "Unicode": "⑧",
+    "Description": "Number Pad 8"
+  },
+  {
+    "Key Code": "105",
+    "Key": "9",
+    "Code": "Numpad9",
+    "Unicode": "⑨",
+    "Description": "Number Pad 9"
+  },
+  {
+    "Key Code": "106",
+    "Key": "*",
+    "Code": "NumpadMultiply",
+    "Unicode": "×",
+    "Description": "multiply"
+  },
+  {
+    "Key Code": "107",
+    "Key": "+",
+    "Code": "NumpadAdd",
+    "Unicode": "",
+    "Description": "add"
+  },
+  {
+    "Key Code": "108",
+    "Key": ",",
+    "Code": "NumpadDecimal",
+    "Unicode": "",
+    "Description": "numpad period (firefox)"
+  },
+  {
+    "Key Code": "109",
+    "Key": "-",
+    "Code": "NumpadSubtract",
+    "Unicode": "",
+    "Description": "subtract"
+  },
+  {
+    "Key Code": "110",
+    "Key": ".",
+    "Code": "NumpadDecimal",
+    "Unicode": "",
+    "Description": "decimal point"
+  },
+  {
+    "Key Code": "111",
+    "Key": "/",
+    "Code": "NumpadDivide",
+    "Unicode": "÷",
+    "Description": "divide"
+  },
+  {
+    "Key Code": "112",
+    "Key": "F1",
+    "Code": "F1",
+    "Unicode": "",
+    "Description": "f1"
+  },
+  {
+    "Key Code": "113",
+    "Key": "F2",
+    "Code": "F2",
+    "Unicode": "",
+    "Description": "f2"
+  },
+  {
+    "Key Code": "114",
+    "Key": "F3",
+    "Code": "F3",
+    "Unicode": "",
+    "Description": "f3"
+  },
+  {
+    "Key Code": "115",
+    "Key": "F4",
+    "Code": "F4",
+    "Unicode": "",
+    "Description": "f4"
+  },
+  {
+    "Key Code": "116",
+    "Key": "F5",
+    "Code": "F5",
+    "Unicode": "",
+    "Description": "f5"
+  },
+  {
+    "Key Code": "117",
+    "Key": "F6",
+    "Code": "F6",
+    "Unicode": "",
+    "Description": "f6"
+  },
+  {
+    "Key Code": "118",
+    "Key": "F7",
+    "Code": "F7",
+    "Unicode": "",
+    "Description": "f7"
+  },
+  {
+    "Key Code": "119",
+    "Key": "F8",
+    "Code": "F8",
+    "Unicode": "",
+    "Description": "f8"
+  },
+  {
+    "Key Code": "120",
+    "Key": "F9",
+    "Code": "F9",
+    "Unicode": "",
+    "Description": "f9"
+  },
+  {
+    "Key Code": "121",
+    "Key": "F10",
+    "Code": "F10",
+    "Unicode": "",
+    "Description": "f10"
+  },
+  {
+    "Key Code": "122",
+    "Key": "F11",
+    "Code": "F11",
+    "Unicode": "",
+    "Description": "f11"
+  },
+  {
+    "Key Code": "123",
+    "Key": "F12",
+    "Code": "F12",
+    "Unicode": "",
+    "Description": "f12"
+  },
+  {
+    "Key Code": "124",
+    "Key": "F13",
+    "Code": "F13",
+    "Unicode": "",
+    "Description": "f13"
+  },
+  {
+    "Key Code": "125",
+    "Key": "F14",
+    "Code": "F14",
+    "Unicode": "",
+    "Description": "f14"
+  },
+  {
+    "Key Code": "126",
+    "Key": "F15",
+    "Code": "F15",
+    "Unicode": "",
+    "Description": "f15"
+  },
+  {
+    "Key Code": "127",
+    "Key": "F16",
+    "Code": "F16",
+    "Unicode": "",
+    "Description": "f16"
+  },
+  {
+    "Key Code": "128",
+    "Key": "F17",
+    "Code": "F17",
+    "Unicode": "",
+    "Description": "f17"
+  },
+  {
+    "Key Code": "129",
+    "Key": "F18",
+    "Code": "F18",
+    "Unicode": "",
+    "Description": "f18"
+  },
+  {
+    "Key Code": "130",
+    "Key": "F19",
+    "Code": "F19",
+    "Unicode": "",
+    "Description": "f19"
+  },
+  {
+    "Key Code": "131",
+    "Key": "F20",
+    "Code": "F20",
+    "Unicode": "",
+    "Description": "F20"
+  },
+  {
+    "Key Code": "132",
+    "Key": "F21",
+    "Code": "F21",
+    "Unicode": "",
+    "Description": "F21"
+  },
+  {
+    "Key Code": "133",
+    "Key": "F22",
+    "Code": "F22",
+    "Unicode": "",
+    "Description": "F22"
+  },
+  {
+    "Key Code": "134",
+    "Key": "F23",
+    "Code": "F23",
+    "Unicode": "",
+    "Description": "F23"
+  },
+  {
+    "Key Code": "135",
+    "Key": "F24",
+    "Code": "F24",
+    "Unicode": "",
+    "Description": "F24"
+  },
+  {
+    "Key Code": "136",
+    "Key": "F25",
+    "Code": "F25",
+    "Unicode": "",
+    "Description": "F25"
+  },
+  {
+    "Key Code": "137",
+    "Key": "F26",
+    "Code": "F26",
+    "Unicode": "",
+    "Description": "F26"
+  },
+  {
+    "Key Code": "138",
+    "Key": "F27",
+    "Code": "F27",
+    "Unicode": "",
+    "Description": "F27"
+  },
+  {
+    "Key Code": "139",
+    "Key": "F28",
+    "Code": "F28",
+    "Unicode": "",
+    "Description": "F28"
+  },
+  {
+    "Key Code": "140",
+    "Key": "F29",
+    "Code": "F29",
+    "Unicode": "",
+    "Description": "F29"
+  },
+  {
+    "Key Code": "141",
+    "Key": "F30",
+    "Code": "F30",
+    "Unicode": "",
+    "Description": "F30"
+  },
+  {
+    "Key Code": "142",
+    "Key": "F31",
+    "Code": "F31",
+    "Unicode": "",
+    "Description": "F31"
+  },
+  {
+    "Key Code": "143",
+    "Key": "F32",
+    "Code": "F32",
+    "Unicode": "",
+    "Description": "F32"
+  },
+  {
+    "Key Code": "144",
+    "Key": "NumLock",
+    "Code": "NumLock",
+    "Unicode": "⇭",
+    "Description": "num lock"
+  },
+  {
+    "Key Code": "145",
+    "Key": "ScrollLock",
+    "Code": "ScrollLock",
+    "Unicode": "⤓",
+    "Description": "scroll lock"
+  },
+  {
+    "Key Code": "151",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "airplane mode"
+  },
+  {
+    "Key Code": "160",
+    "Key": "[",
+    "Code": "BracketLeft",
+    "Unicode": "",
+    "Description": "^"
+  },
+  {
+    "Key Code": "161",
+    "Key": "Dead",
+    "Code": "BracketRight",
+    "Unicode": "",
+    "Description": "!"
+  },
+  {
+    "Key Code": "162",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "؛ (arabic semicolon)"
+  },
+  {
+    "Key Code": "163",
+    "Key": "\\",
+    "Code": "Backquote",
+    "Unicode": "",
+    "Description": "#"
+  },
+  {
+    "Key Code": "164",
+    "Key": "$",
+    "Code": "Backslash",
+    "Unicode": "",
+    "Description": "$"
+  },
+  {
+    "Key Code": "165",
+    "Key": "^ù",
+    "Code": "Quote",
+    "Unicode": "",
+    "Description": "ù"
+  },
+  {
+    "Key Code": "166",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "page backward"
+  },
+  {
+    "Key Code": "167",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "page forward"
+  },
+  {
+    "Key Code": "168",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "refresh"
+  },
+  {
+    "Key Code": "169",
+    "Key": ")",
+    "Code": "Minus",
+    "Unicode": "",
+    "Description": "closing paren (AZERTY)"
+  },
+  {
+    "Key Code": "170",
+    "Key": "*",
+    "Code": "Backslash",
+    "Unicode": "",
+    "Description": "*"
+  },
+  {
+    "Key Code": "171",
+    "Key": "+",
+    "Code": "BracketRight",
+    "Unicode": "",
+    "Description": "~ + * key"
+  },
+  {
+    "Key Code": "172",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "home key"
+  },
+  {
+    "Key Code": "173",
+    "Key": "-",
+    "Code": "Minus",
+    "Unicode": "",
+    "Description": "minus (firefox), mute/unmute"
+  },
+  {
+    "Key Code": "174",
+    "Key": "AudioVolumeDown",
+    "Code": "",
+    "Unicode": "",
+    "Description": "decrease volume level"
+  },
+  {
+    "Key Code": "175",
+    "Key": "AudioVolumeUp",
+    "Code": "",
+    "Unicode": "",
+    "Description": "increase volume level"
+  },
+  {
+    "Key Code": "176",
+    "Key": "MediaTrackNext",
+    "Code": "MediaTrackNext",
+    "Unicode": "",
+    "Description": "next"
+  },
+  {
+    "Key Code": "177",
+    "Key": "MediaTrackPrevious",
+    "Code": "MediaTrackPrevious",
+    "Unicode": "",
+    "Description": "previous"
+  },
+  {
+    "Key Code": "178",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "stop"
+  },
+  {
+    "Key Code": "179",
+    "Key": "MediaPlayPause",
+    "Code": "",
+    "Unicode": "",
+    "Description": "play/pause"
+  },
+  {
+    "Key Code": "180",
+    "Key": "LaunchMail",
+    "Code": "",
+    "Unicode": "✉",
+    "Description": "e-mail"
+  },
+  {
+    "Key Code": "181",
+    "Key": "AudioVolumeMute",
+    "Code": "VolumeMute",
+    "Unicode": "",
+    "Description": "mute/unmute (firefox)"
+  },
+  {
+    "Key Code": "182",
+    "Key": "AudioVolumeDown",
+    "Code": "VolumeDown",
+    "Unicode": "",
+    "Description": "decrease volume level (firefox)"
+  },
+  {
+    "Key Code": "183",
+    "Key": "AudioVolumeUp",
+    "Code": "VolumeUp",
+    "Unicode": "",
+    "Description": "increase volume level (firefox)"
+  },
+  {
+    "Key Code": "186",
+    "Key": ";",
+    "Code": "Semicolon",
+    "Unicode": "",
+    "Description": "semi-colon / ñ"
+  },
+  {
+    "Key Code": "187",
+    "Key": "+",
+    "Code": "Equal",
+    "Unicode": "",
+    "Description": "equal sign"
+  },
+  {
+    "Key Code": "188",
+    "Key": ",",
+    "Code": "Comma",
+    "Unicode": "",
+    "Description": "comma"
+  },
+  {
+    "Key Code": "189",
+    "Key": "-",
+    "Code": "Minus",
+    "Unicode": "",
+    "Description": "dash"
+  },
+  {
+    "Key Code": "190",
+    "Key": ".",
+    "Code": "Period",
+    "Unicode": "",
+    "Description": "period"
+  },
+  {
+    "Key Code": "191",
+    "Key": "/",
+    "Code": "Slash",
+    "Unicode": "",
+    "Description": "forward slash / ç"
+  },
+  {
+    "Key Code": "192",
+    "Key": "`",
+    "Code": "Backquote",
+    "Unicode": "",
+    "Description": "Backtick / grave accent / ñ / æ / ö"
+  },
+  {
+    "Key Code": "193",
+    "Key": "/",
+    "Code": "IntlRo",
+    "Unicode": "",
+    "Description": "?, / or °"
+  },
+  {
+    "Key Code": "194",
+    "Key": ".",
+    "Code": "NumpadComma",
+    "Unicode": "",
+    "Description": "numpad period (chrome)"
+  },
+  {
+    "Key Code": "219",
+    "Key": "[",
+    "Code": "BracketLeft",
+    "Unicode": "",
+    "Description": "open bracket"
+  },
+  {
+    "Key Code": "220",
+    "Key": "\\",
+    "Code": "Backslash",
+    "Unicode": "",
+    "Description": "back slash"
+  },
+  {
+    "Key Code": "221",
+    "Key": "]",
+    "Code": "BracketRight",
+    "Unicode": "",
+    "Description": "close bracket / å"
+  },
+  {
+    "Key Code": "222",
+    "Key": "'",
+    "Code": "Quote",
+    "Unicode": "",
+    "Description": "single quote / ø / ä"
+  },
+  {
+    "Key Code": "223",
+    "Key": "`",
+    "Code": "Backquote",
+    "Unicode": "",
+    "Description": "`"
+  },
+  {
+    "Key Code": "224",
+    "Key": "Meta",
+    "Code": "OSLeft",
+    "Unicode": "⌘",
+    "Description": "left or right ⌘ key (firefox)"
+  },
+  {
+    "Key Code": "225",
+    "Key": "AltGraph",
+    "Code": "AltRight",
+    "Unicode": "⎇ or ⌥",
+    "Description": "altgr"
+  },
+  {
+    "Key Code": "226",
+    "Key": "\\",
+    "Code": "IntlBackslash",
+    "Unicode": "",
+    "Description": "< /git >, left back slash"
+  },
+  {
+    "Key Code": "230",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "GNOME Compose Key"
+  },
+  {
+    "Key Code": "231",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "ç"
+  },
+  {
+    "Key Code": "233",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "XF86Forward"
+  },
+  {
+    "Key Code": "234",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "XF86Back"
+  },
+  {
+    "Key Code": "235",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "non-conversion"
+  },
+  {
+    "Key Code": "240",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "alphanumeric"
+  },
+  {
+    "Key Code": "242",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "hiragana/katakana"
+  },
+  {
+    "Key Code": "243",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "half-width/full-width"
+  },
+  {
+    "Key Code": "244",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "kanji"
+  },
+  {
+    "Key Code": "251",
+    "Key": "",
+    "Code": "",
+    "Unicode": "",
+    "Description": "unlock track pad (Chrome/Edge)"
+  },
+  {
+    "Key Code": "255",
+    "Key": "Unidentified",
+    "Code": "WakeUp",
+    "Unicode": "",
+    "Description": "toggle touchpad"
+  }
+]
