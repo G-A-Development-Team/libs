@@ -1,10 +1,8 @@
-local function using(pkgn) file.Write( "\\using/json.lua", http.Get( "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/json.lua" ) ) LoadScript("\\using/json.lua") local pkg = json.decode(http.Get("https://raw.githubusercontent.com/G-A-Development-Team/Using/main/using.json"))["pkgs"][ pkgn ] if pkg ~= nil then file.Write( "\\using/" .. pkgn .. ".lua", http.Get( pkg ) ) LoadScript("\\using/" .. pkgn .. ".lua") else print("[using] package doesn't exist. {" .. pkgn .. "}") end end
+function GetScreenWidth() local w, h = draw.GetScreenSize()  return w end
 
-local function GetScreenWidth() local w, h = draw.GetScreenSize()  return w end
+function GetScreenHeight() local w, h = draw.GetScreenSize() return h end
 
-local function GetScreenHeight() local w, h = draw.GetScreenSize() return h end
-
-local Globals = {
+Globals = {
     thruclick = false,
     dummywindow = nil,
     openkey = 35,
@@ -49,7 +47,7 @@ local Globals = {
     end,
 }
 
-local Overlay = {
+Overlay = {
     x = 0, y = 0,
     w = GetScreenWidth(),
     h = GetScreenHeight(),
@@ -229,7 +227,7 @@ local Overlay = {
     end,
 }
 
-local function KeybindManager()
+function KeybindManager()
     for key, value in pairs(Overlay:GetKeybinds()) do
         if input.IsButtonReleased(key) then
             value(Overlay)
@@ -237,7 +235,7 @@ local function KeybindManager()
     end
 end
 
-local function GlobalsManager()
+function GlobalsManager()
     Globals:GetDummyWindow():SetActive(Globals:GetThruClick())
     Globals:GetDummyWindow():SetInvisible(Globals:GetThruClick())
 end
@@ -251,7 +249,7 @@ callbacks.Register("Draw", "Render", function()
     Overlay:Draw()
 end)
 
-local Label = function(X, Y, Options)
+Label = function(X, Y, Options)
     local component = {
         name = "label",
         text = Options["Text"],
@@ -312,7 +310,7 @@ local Label = function(X, Y, Options)
     return Overlay:CombineComponentTable(component, X, Y)
 end
 
-local Picture = function(X, Y, W, H, Options)
+Picture = function(X, Y, W, H, Options)
     local component = {
         name = "picture",
         alpha = Options["Alpha"] or 255,
@@ -352,7 +350,7 @@ local Picture = function(X, Y, W, H, Options)
     return Overlay:CombineComponentTable(component, X, Y)
 end
 
-local Button = function(X, Y, W, H, Options)
+Button = function(X, Y, W, H, Options)
     local component = {
         name = "button",
         text = Options["Text"],
@@ -425,7 +423,7 @@ local Button = function(X, Y, W, H, Options)
     return Overlay:CombineComponentTable(component, X, Y)
 end
 
-local InputBox = function(X, Y, W, H, Options)
+InputBox = function(X, Y, W, H, Options)
     local component = {
         name = "inputbox",
         text = Options["Text"],
@@ -577,7 +575,7 @@ local InputBox = function(X, Y, W, H, Options)
     return Overlay:CombineComponentTable(component, X, Y)
 end
 
-local Checkbox = function(X, Y, W, H, Options)
+Checkbox = function(X, Y, W, H, Options)
     local component = {
         name = "checkbox",
         checked = Options["Checked"],
@@ -656,7 +654,7 @@ local Checkbox = function(X, Y, W, H, Options)
     return Overlay:CombineComponentTable(component, X, Y)
 end
 
-local Window = function(X, Y, W, H, Options)
+Window = function(X, Y, W, H, Options)
     local component = {
         name = "window",
         title = Options["Title"],
