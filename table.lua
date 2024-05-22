@@ -29,3 +29,9 @@ function table.ContainsKey( tbl, key )
     end
     return false
 end
+
+function table.Count( t )
+	local i = 0
+	for k in pairs( t ) do i = i + 1 end
+	return i
+end
