@@ -1,5 +1,5 @@
 
-Libraries = {
+local Libraries = {
     "json"   = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/json.lua",
     "string" = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/string.lua",
     "table"  = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/table.lua"
