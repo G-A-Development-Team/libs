@@ -5,14 +5,14 @@ function string.Explode( separator, str, withpattern )
 	local ret = {}
 	local current_pos = 1
 
-	for i = 1, string_len( str ) do
-		local start_pos, end_pos = string_find( str, separator, current_pos, not withpattern )
+	for i = 1, string.len( str ) do
+		local start_pos, end_pos = string.find( str, separator, current_pos, not withpattern )
 		if ( not start_pos ) then break end
-		ret[ i ] = string_sub( str, current_pos, start_pos - 1 )
+		ret[ i ] = string.sub( str, current_pos, start_pos - 1 )
 		current_pos = end_pos + 1
 	end
 
-	ret[ #ret + 1 ] = string_sub( str, current_pos )
+	ret[ #ret + 1 ] = string.sub( str, current_pos )
 
 	return ret
 end
@@ -38,3 +38,56 @@ end
 function string.EndsWith( str, endStr )
 	return endStr == "" or string.sub( str, -string.len( endStr ) ) == endStr
 end
+
+local function RepeatText( string, amount )
+    local out = ""
+    for 1=1, amount do
+        out = out .. string
+    end
+    return out
+end
+
+function string.PadLeft( str, len, pad )
+
+    local strlen = string.len( str )
+    if strlen >= len then return str end
+
+    local padding = " "
+    local paddinglen = 0
+
+    if pad then
+        if pad ~= padding then
+            if string.len( pad ) > 0 then
+                padding = pad
+            end
+        end
+    end
+
+    paddinglen = string.len( padding )
+
+    local remainder = len-strlen
+
+    if remainder > 0 then
+        
+        if remainder < paddinglen then return string.sub( padding, 1, remainder ) .. str end
+        if remainder == paddinglen then return padding .. str end
+        if remainder > paddinglen then
+
+            local pamount = math.floor( remainder/paddinglen )
+            local plenamount = pamount*paddinglen
+            local newpadding = RepeatText( padding, pamount )
+            local newpaddinglen = string.len( newpadding )
+            if plenamount > remainder then 
+                
+                local premove = newpaddinglen-remainder
+                local editpadding = string.sub( newpadding, 1, newpaddinglen-premove )
+                return editpadding .. str
+            elseif plenamount < remainder then
+
+            end
+        end
+
+    end
+end    
+
+
