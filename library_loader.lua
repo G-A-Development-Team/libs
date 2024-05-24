@@ -1,8 +1,20 @@
+
 Libraries = {
-    "json"   = { found = false, url = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/json.lua" },
-    "string" = { found = false, url = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/string.lua" },
-    "table"  = { found = false, url = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/table.lua" }
+    "json"   = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/json.lua",
+    "string" = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/string.lua",
+    "table"  = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/table.lua"
 }
+
+----------------------
+-- Don't Edit Below --
+----------------------
+local tbl = {}
+for loc, url in pairs( Libraries ) do
+    tbl[ loc ] = {}
+    tbl[ loc ].found = false
+    tbl[ loc ].url = url
+end
+Libraries = tbl
 
 file.Enumerate( function( filename )
     
@@ -24,3 +36,6 @@ end
 for loc, data in pairs( Libraries ) do
     RunScript("libraries/" .. loc .. ".lua")
 end
+---------------------
+-- Script Complete --
+---------------------
