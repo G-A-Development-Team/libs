@@ -1,5 +1,17 @@
+function string.ToTable( input )
+	local tbl = {}
+
+	local str = tostring( input )
+
+	for i = 1, #str do
+		tbl[i] = string.sub( str, i, i )
+	end
+
+	return tbl
+end
+
 function string.Explode( separator, str, withpattern )
-	if ( separator == "" ) then return totable( str ) end
+	if ( separator == "" ) then return string.ToTable( str ) end
 	if ( withpattern == nil ) then withpattern = false end
 
 	local ret = {}
