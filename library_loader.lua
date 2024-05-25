@@ -1,6 +1,6 @@
 
 local Libraries = {
-    json   = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/json.lua"
+    ["json"]   = "https://raw.githubusercontent.com/G-A-Development-Team/libs/main/json.lua"
 }
 
 ----------------------
