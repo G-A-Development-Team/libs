@@ -6,19 +6,24 @@ function UpdateBombInfo()
     local pC4               = (entities.FindByClass("C_C4"))[1];
     local pPlantedC4        = (entities.FindByClass("C_PlantedC4"))[1];
     if not pC4 and not pPlantedC4 then
+		timePlanted = 0
+        --g_iBombState = BOMB_NOTFOUND;
         return;
 
     elseif pPlantedC4 then
 
         if not pPlantedC4:GetPropBool("m_bBombTicking") then
-
+            --g_iBombState = BOMB_DEAD;
+        
         elseif pPlantedC4:GetPropBool("m_bBeingDefused") then
             defusing = true ended = false
         else
 			defusing = false 
 			ended = false
 			--PLANTED--
-			timePlanted = globals.CurTime() 
+			if timePlanted == 0 then
+				timePlanted = globals.CurTime() 
+			end
 			ended = false
         end
 
