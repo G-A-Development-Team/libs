@@ -1,5 +1,35 @@
 class_plantedC = "C_PlantedC4"
 
+timePlanted = 0 
+defusing = false 
+ended = false
+
+function UpdateBombInfo()
+    local pC4               = (entities.FindByClass("C_C4"))[1];
+    local pPlantedC4        = (entities.FindByClass(class_plantedC))[1];
+    if not pC4 and not pPlantedC4 then
+        g_iBombState = BOMB_NOTFOUND;
+        return;
+
+    elseif pPlantedC4 then
+        g_vecBombPosition = pPlantedC4:GetAbsOrigin();
+
+        if not pPlantedC4:GetPropBool("m_bBombTicking") then
+            g_iBombState = BOMB_DEAD;
+        
+        elseif pPlantedC4:GetPropBool("m_bBeingDefused") then
+            defusing = true ended = false
+        else
+			defusing = false 
+			ended = false
+			[[PLANTED]]
+			timePlanted = globals.CurTime() ended = false
+        end
+
+        return;
+    end
+end
+
 function BombDamage(Bomb, Player)
 
     local playerOrigin = Player:GetAbsOrigin()
