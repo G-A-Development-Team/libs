@@ -1,3 +1,5 @@
+class_plantedC = "C_PlantedC4"
+
 function BombDamage(Bomb, Player)
 
     local playerOrigin = Player:GetAbsOrigin()
