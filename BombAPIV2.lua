@@ -31,42 +31,46 @@ function UpdateBombInfo()
     end
 end
 
-function BombDamage(Bomb, Player)
+local m = {
+	-- Updated August-6th-2024 @12:42 EST
+	-- map_showbombradius || bombradius @ game/csgo/maps/<map>.vpk/entities/default_ents.vents_c ## only lists if value is overwritten
+	["maps/de_ancient.vpk" ] = 650 * 3.5;
+	["maps/de_anubis.vpk"  ] = 450 * 3.5;
+	["maps/de_assembly.vpk"] = 500 * 3.5;
+	["maps/de_inferno.vpk" ] = 620 * 3.5;
+	["maps/de_mills.vpk"   ] = 500 * 3.5;
+	["maps/de_mirage.vpk"  ] = 650 * 3.5;
+	["maps/de_nuke.vpk"    ] = 650 * 3.5;
+	["maps/de_overpass.vpk"] = 650 * 3.5;
+	["maps/de_thera.vpk"   ] = 500 * 3.5;
+	["maps/de_vertigo.vpk" ] = 500 * 3.5;
+};
 
-    local playerOrigin = Player:GetAbsOrigin()
-    local bombOrigin = Bomb:GetAbsOrigin()
+function GetBombRadius()
+	return m[engine.GetMapName()] or 1750;
+end
 
-	local C4Distance = math.sqrt((bombOrigin.x - playerOrigin.x) ^ 2 + 
-	(bombOrigin.y - playerOrigin.y) ^ 2 + 
-	(bombOrigin.z - playerOrigin.z) ^ 2);
+function BombDamage(pPlantedC4, pLocalPlayer)
 
-	local Gauss = (C4Distance - 75.68) / 789.2 
-	local flDamage = 450.7 * math.exp(-Gauss * Gauss);
+    local iArmor = pLocalPlayer:GetPropInt("m_ArmorValue");
 
-		if Player:GetPropInt("m_ArmorValue") > 0 then
+    local flBombRadius = GetBombRadius();
+    local flDistance = (pPlantedC4:GetAbsOrigin() - (pLocalPlayer:GetAbsOrigin() + pLocalPlayer:GetPropVector("m_vecViewOffset"))):Length();
+    local flDamage = (flBombRadius / 3.5) * math.exp(flDistance^2 / (-2 * (flBombRadius / 3)^2));
 
-			local flArmorRatio = 0.5;
-			local flArmorBonus = 0.5;
+    if(iArmor == 0)then
+        return flDamage;
+    end
 
-			if Player:GetPropInt("m_ArmorValue") > 0 then
-			
-				local flNew = flDamage * flArmorRatio;
-				local flArmor = (flDamage - flNew) * flArmorBonus;
-			 
-				if flArmor > Player:GetPropInt("m_ArmorValue") then
-				
-					flArmor = Player:GetPropInt("m_ArmorValue") * (1 / flArmorBonus);
-					flNew = flDamage - flArmor;
-					
-				end
-			 
-			flDamage = flNew;
+    local flReducedDamage = flDamage / 2;
+    
+    -- We do not have enough armor to cover the full damage of the bomb
+    if(iArmor < flReducedDamage)then
+        local flFraction = iArmor / flReducedDamage;
+        return (flFraction * flReducedDamage) + (1 - flFraction) * flDamage;
+    end
 
-			end
-
-		end 
-		
-	return math.max(flDamage, 0);
+    return flReducedDamage;
 	
 end
 
