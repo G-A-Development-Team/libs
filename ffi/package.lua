@@ -155,20 +155,39 @@ end
 
 if not package then luaopen_package() end
 
+-- Define a list of base URLs to search for Lua modules
+local baseURLs = {
+    "https://raw.githubusercontent.com/qi-ux/aimware/main/cs2/libraries/%s.lua",
+    "https://raw.github.com/G-A-Development-Team/libs/main/%s.lua", -- Add more URLs as needed
+}
+
 table.insert(package.loaders, function(...)
     local modname = unpack({...})
-    if type(modname) ~= "string" then return error(("bad argument #1 to '%s' (string expected, got %s)"):format(debug.getinfo(2, "n").name or "?", select("#", ...) < 1 and "no value" or type(modname))) end
+    if type(modname) ~= "string" then
+        return error(("bad argument #1 to '%s' (string expected, got %s)"):format(
+            debug.getinfo(2, "n").name or "?", 
+            select("#", ...) < 1 and "no value" or type(modname)
+        ))
+    end
 
     local path, count = modname:gsub("%.", "/"):gsub("^aimware/", "")
     if count == 0 then return end
 
-    local body = http.Get(("https://raw.githubusercontent.com/qi-ux/aimware/main/cs2/libraries/%s.lua"):format(path))
-    if not body then return end
+    local body, chunk, message
+    for _, baseURL in ipairs(baseURLs) do
+        local url = ("%s%s.lua"):format(baseURL, path)
+        body = http.Get(url)
+        if body then
+            chunk, message = loadstring(body, ("=%s"):format(modname))
+            if chunk then
+                return chunk
+            else
+                return error(("error loading module '%s' from http:\n\t%s"):format(modname, message))
+            end
+        end
+    end
 
-    local chunk, message = loadstring(body, ("=%s"):format(modname))
-    if chunk then return chunk end
-
-    return error(("error loading module '%s' from http:\n\t%s"):format(modname, message))
+    return error(("module '%s' not found in any of the URLs"):format(modname))
 end)
 
 return package
