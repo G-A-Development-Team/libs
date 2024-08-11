@@ -1,3 +1,5 @@
+using "Analytics"
+
 windows = {}
 
 local function Move(window)
