@@ -182,7 +182,7 @@ table.insert(package.loaders, function(...)
             if chunk then
                 return chunk
             else
-                error(("error loading module '%s' from http:\n\t%s"):format(modname, message))
+                
             end
         end
     end
