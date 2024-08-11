@@ -173,12 +173,12 @@ table.insert(package.loaders, function(...)
     local path, count = modname:gsub("%.", "/"):gsub("^aimware/", "")
     if count == 0 then return end
 
-    local body, chunk, message
+
     for _, baseURL in ipairs(baseURLs) do
-        local url = ("%s%s.lua"):format(baseURL, path)
-        body = http.Get(url)
+        local url = ("%s.lua"):format(path)
+        local body = http.Get((baseURL):format(path))
         if body then
-            chunk, message = loadstring(body, ("=%s"):format(modname))
+            local chunk, message = loadstring(body, ("=%s"):format(modname))
             if chunk then
                 return chunk
             else
@@ -189,7 +189,6 @@ table.insert(package.loaders, function(...)
 
     return error(("module '%s' not found in any of the URLs"):format(modname))
 end)
-
 return package
 
 
