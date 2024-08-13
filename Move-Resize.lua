@@ -17,8 +17,10 @@ local function Move(window)
 						shouldDrag = true;
 						dx = mouseX - window.X;
 						dy = mouseY - window.Y;
-						if window.Form.Dragging ~= nil then
-							window.Form.Dragging = true
+						if window.Form ~= nil then
+							if window.Form.Dragging ~= nil then
+								window.Form.Dragging = true
+							end
 						end
 					end
 					
@@ -29,8 +31,10 @@ local function Move(window)
 							shouldDrag = true;
 							dx = mouseX - window.X;
 							dy = mouseY - window.Y;
-							if window.Form.Dragging ~= nil then
-								window.Form.Dragging = true
+							if window.Form ~= nil then
+								if window.Form.Dragging ~= nil then
+									window.Form.Dragging = true
+								end
 							end
 						end
 					else
@@ -38,14 +42,18 @@ local function Move(window)
 						shouldDrag = true;
 						dx = mouseX - window.X;
 						dy = mouseY - window.Y;
-						if window.Form.Dragging ~= nil then
-							window.Form.Dragging = true
+						if window.Form ~= nil then
+							if window.Form.Dragging ~= nil then
+								window.Form.Dragging = true
+							end
 						end
 					end
 				end
 			else
-				if window.Form.Dragging ~= nil then
-					window.Form.Dragging = true
+				if window.Form ~= nil then
+					if window.Form.Dragging ~= nil then
+						window.Form.Dragging = true
+					end
 				end
 			end
 		else
