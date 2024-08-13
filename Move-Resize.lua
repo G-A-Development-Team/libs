@@ -50,8 +50,10 @@ local function Move(window)
 			end
 		else
 			shouldDrag = false;
-			if window.Form.Dragging ~= nil then
-				window.Form.Dragging = false
+			if window.Form ~= nil then
+				if window.Form.Dragging ~= nil then
+					window.Form.Dragging = false
+				end
 			end
 			
 		end
