@@ -1,5 +1,5 @@
 -- vim: ft=lua ts=2 sw=2
-
+HtmlParser = {}
 -- Syntactic Sugar {{{
     local function rine(val) -- Return (val) If it's Not Empty (non-zero-length)
         return (val and #val>0) and val
@@ -339,7 +339,6 @@
         wbr = true
     }
     --}}}
-    HtmlParser = {}
     local function parse(text,limit) -- {{{
         local opts = rine(opts) -- use top-level opts-table (the one, defined before requiring the module), if exists
             or rit(htmlparser_opts) -- or defined after requiring (but before calling `parse`)
