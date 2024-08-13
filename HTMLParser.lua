@@ -339,7 +339,7 @@
         wbr = true
     }
     --}}}
-    local HtmlParser = {}
+    HtmlParser = {}
     local function parse(text,limit) -- {{{
         local opts = rine(opts) -- use top-level opts-table (the one, defined before requiring the module), if exists
             or rit(htmlparser_opts) -- or defined after requiring (but before calling `parse`)
