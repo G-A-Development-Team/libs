@@ -101,6 +101,7 @@ local function Resize(window)
 end
 
 callbacks.Register("Draw", function()
+	if windows == nil then return end
     for i = 1, #windows do
         local window = windows[i]
 		if window.Form ~= nil then
@@ -139,7 +140,7 @@ callbacks.Register("Draw", function()
 
 		if window.Type ~= nil then
 			if window.Type == "Browser" then
-				window.Draw(window, window.X, window.Y, window.W, window.H)
+				window:Draw(window.X, window.Y, window.W, window.H)
 			else
 				window.Draw(window.X, window.Y, window.W, window.H)
 			end
@@ -181,4 +182,12 @@ callbacks.Register("Draw", function()
 		end
 
     end
+end)
+
+callbacks.Register("Unload", function()
+	if windows == nil then return end
+	for i = 1, #windows do
+		table.remove(windows, i)
+	end
+	windows = nil
 end)
