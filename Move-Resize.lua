@@ -1,4 +1,6 @@
-using "Analytics"
+if using then
+	using "Analytics"
+end
 
 windows = {}
 
@@ -124,7 +126,26 @@ callbacks.Register("Draw", function()
 			window.MaxH = window.Form.MaximumSize.Height
 		end
 
-		window.Draw(window.X, window.Y, window.W, window.H)
+		if window.InitDone == nil then
+			window.InitDone = false
+		else
+			if window.Init ~= nil then
+				if not window.InitDone then
+					window.Init()
+					window.InitDone = true
+				end
+			end
+		end
+
+		if window.Type ~= nil then
+			if window.Type == "Browser" then
+				window.Draw(window, window.X, window.Y, window.W, window.H)
+			else
+				window.Draw(window.X, window.Y, window.W, window.H)
+			end
+		else
+			window.Draw(window.X, window.Y, window.W, window.H)
+		end
 
 		if window.Form ~= nil then
 			if window.Form.BorderStyle == "Sizable" then
