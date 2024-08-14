@@ -131,7 +131,7 @@ callbacks.Register("Draw", function()
 		else
 			if window.Init ~= nil then
 				if not window.InitDone then
-					window.Init()
+					window.Init(window)
 					window.InitDone = true
 				end
 			end
